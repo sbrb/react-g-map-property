@@ -1,1 +1,1 @@
-# g-map
+# react-g-map
