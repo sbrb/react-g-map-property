@@ -1,5 +1,6 @@
 import React, { useState, Fragment } from "react";
 import Places from "./Places";
+import "./style.css"
 import {
   useLoadScript,
   GoogleMap,
@@ -16,7 +17,7 @@ function App() {
   const [infoOpen, setInfoOpen] = useState(false);
 
   const { isLoaded } = useLoadScript({
-    googleMapsApiKey: "AIzaSyDzaUIJOE2L5qTrD4CXFKG1UsiNG8eOZtw",
+    googleMapsApiKey: "AIzaSyDl4ZMAHu4cEiSY78KpaEcN4_YquSoZvgw",
   });
 
   const fitBounds = (map) => {
@@ -68,8 +69,11 @@ function App() {
               onLoad={(marker) => markerLoadHandler(marker, place)}
               onClick={(event) => markerClickHandler(event, place)}
               icon={{
-                icon: "https://gasdeverao.cocacola.com.br/assets/favicons/favicon-32x32.png",
-                fillColor: "red",
+                // icon: "https://gasdeverao.cocacola.com.br/assets/favicons/favicon-32x32.png",
+                path: "M12.75 0l-2.25 2.25 2.25 2.25-5.25 6h-5.25l4.125 4.125-6.375 8.452v0.923h0.923l8.452-6.375 4.125 4.125v-5.25l6-5.25 2.25 2.25 2.25-2.25-11.25-11.25zM10.5 12.75l-1.5-1.5 5.25-5.25 1.5 1.5-5.25 5.25z",
+                
+                fillColor: "#ff0000",
+                fillOpacity: 1
               }}
             />
           ))}
@@ -79,11 +83,25 @@ function App() {
               anchor={markerMap[selectedPlace.id]}
               onCloseClick={() => setInfoOpen(false)}
             >
-              <div>
-                <a href={selectedPlace.link}>
-                  <h3>{selectedPlace.title}</h3>
-                  <div>{selectedPlace.description}</div>
-                </a>
+              <div className="card_container">
+                <div className="card_img">
+                  <img src={selectedPlace.image} alt="house img" />
+                </div>
+                <div className="card_dites">
+                  <a
+                    style={{ textDecoration: "none", fontWeight: "900" }}
+                    href={selectedPlace.link}
+                  >
+                    <b>{selectedPlace.title}</b>
+                  </a>
+                  <div>{selectedPlace.price}</div>
+                  <div>{selectedPlace.area}</div>
+                  <div
+                    style={{ textTransform: "uppercase", fontWeight: "400" }}
+                  >
+                    {selectedPlace.description}
+                  </div>
+                </div>
               </div>
             </InfoWindow>
           )}
