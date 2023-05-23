@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import Places from "./Places";
 import "./style.css";
 import {
@@ -41,7 +41,6 @@ function App() {
   };
 
   const markerClickHandler = (event, place) => {
-    // console.log(place);
     setSelectedPlace(place);
     if (infoOpen) {
       setInfoOpen(false);
@@ -114,7 +113,7 @@ function App() {
             <div
               className="house"
               onMouseEnter={(e) => markerClickHandler(e, home)}
-              // onClick={(marker) => markerLoadHandler(marker, home)}
+              onMouseLeave={() => setInfoOpen(false)}
             >
               <img className="house_img" src={home.image} alt="house img" />
               <div className="house_details">
