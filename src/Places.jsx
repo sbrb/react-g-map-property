@@ -8,7 +8,7 @@ const Places = [
     area: "2000/sq ft",
     pos: { lat: 39.09366509575983, lng: -94.58751660204751 },
     link: "https://google.com",
-    description: "Lorem ipsum dolor sit.",
+    description: "Lorem ipsum.",
   },
   {
     id: "2",
@@ -19,7 +19,7 @@ const Places = [
     area: "2500/sq ft",
     pos: { lat: 39.10894664788252, lng: -94.57926449532226 },
     link: "https://google.com",
-    description: "Nihil cupiditate ut error veritatis.",
+    description: "Nihil cupiditate.",
   },
   {
     id: "3",
@@ -30,7 +30,7 @@ const Places = [
     area: "3000/sq ft",
     pos: { lat: 39.07602397235644, lng: -94.5184089401211 },
     link: "https://google.com",
-    description: "Fugit vel repellat deserunt fugiat molestias.",
+    description: "Fugit vel molestias.",
   },
   {
     id: "4",
@@ -40,7 +40,7 @@ const Places = [
     area: "3500/sq ft",
     pos: { lat: 39.059022, lng: -94.475155 },
     link: "https://google.com",
-    description: "Hello Murshidabad fugiat molestias.",
+    description: "Hello Murshidabad.",
   },
 ];
 

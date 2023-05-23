@@ -1,16 +1,38 @@
-.card_container{
-    /* width: 300px;  */
+.card_container {
     height: 90px;
     display: flex;
     justify-content: space-between;
 }
-.card_img img{
+
+.card_img img {
     width: 130px;
     height: 80px;
     margin-right: 1rem;
 }
-.card_dites{
+
+.card_dites {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+.house_container {
+    display: flex;
+    width: 900px;
+    margin: auto;
+}
+
+.house {
+    width: 400px;
+    border: 1px solid red;
+    margin: .5rem;
+}
+
+.house_img {
+    width: 100%;
+    height: 150px;
+}
+
+.house_details{
+    margin: .5rem;
 }
