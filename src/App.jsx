@@ -8,6 +8,24 @@ import {
   InfoWindow,
 } from "@react-google-maps/api";
 
+
+
+const options = {
+    styles: [
+        {
+            featureType: "landscape",
+            elementType: "geometry",
+            stylers: [{ color: "#ffffff" }], // Set the map ground color to white
+        },
+        {
+            featureType: "water",
+            elementType: "geometry",
+            stylers: [{ color: "#87ceeb" }], // Set the water bodies color to sky blue
+        },
+    ],
+};
+
+
 function App() {
   const [mapRef, setMapRef] = useState(null);
   const [selectedPlace, setSelectedPlace] = useState(null);
@@ -62,6 +80,7 @@ function App() {
               width: "900px",
               margin: "auto",
             }}
+             options={options}
           >
             {Places.map((place) => (
               <Marker
